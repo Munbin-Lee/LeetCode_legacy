@@ -12,17 +12,10 @@ class Solution
             int idx = nums.size() - 1;
             int lo = 0;
             int hi = nums.size() - 1;
-            
+
             while (lo <= hi)
             {
-                if (nums[lo] < nums[hi])
-                {
-                    res[idx--] = nums[hi--];
-                }
-                else
-                {
-                    res[idx--] = nums[lo++];
-                }
+                res[idx--] = (nums[lo] < nums[hi]) ? nums[hi--] : nums[lo++];
             }
             return res;
         }
