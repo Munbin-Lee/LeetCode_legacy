@@ -12,8 +12,7 @@ class Solution
                 tmp[i] = nums[nums.size() - k + i];
             }
 
-            int j = i;
-            for (; i < nums.size(); i++)
+            for (int j = i; i < nums.size(); i++)
             {
                 tmp[i] = nums[i - j];
             }
