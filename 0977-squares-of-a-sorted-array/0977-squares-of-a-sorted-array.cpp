@@ -13,7 +13,7 @@ class Solution
             int lo = 0;
             int hi = nums.size() - 1;
 
-            while (lo <= hi)
+            while (idx != -1)
             {
                 res[idx--] = (nums[lo] < nums[hi]) ? nums[hi--] : nums[lo++];
             }
