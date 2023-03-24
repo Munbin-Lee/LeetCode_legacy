@@ -9,6 +9,7 @@ class Solution
             int lo = 1;
             int hi = n;
             int res;
+            
             while (lo <= hi)
             {
                 int md = lo + (hi - lo) / 2;
