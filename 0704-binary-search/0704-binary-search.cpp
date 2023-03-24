@@ -5,6 +5,7 @@ class Solution
         {
             int lo = 0;
             int hi = nums.size() - 1;
+            
             while (lo <= hi)
             {
                 int md = (lo + hi) / 2;
@@ -12,6 +13,7 @@ class Solution
                 {
                     return md;
                 }
+                
                 (nums[md] < target) ? lo = md + 1: hi = md - 1;
             }
             return -1;
