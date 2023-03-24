@@ -12,14 +12,7 @@ class Solution
                 {
                     return md;
                 }
-                if (nums[md] < target)
-                {
-                    lo = md + 1;
-                }
-                else
-                {
-                    hi = md - 1;
-                }
+                (nums[md] < target) ? lo = md + 1: hi = md - 1;
             }
             return -1;
         }
