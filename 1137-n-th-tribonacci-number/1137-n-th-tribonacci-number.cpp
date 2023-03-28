@@ -7,8 +7,6 @@ class Solution
             memo[0] = 0;
             memo[1] = 1;
             memo[2] = 1;
-            
-            if (n <= 2) return memo[n];
 
             for (int i = 3; i <= n; i++)
             {
