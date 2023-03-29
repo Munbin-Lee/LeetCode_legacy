@@ -17,7 +17,7 @@ class Solution
             sort(nums.begin(), nums.end());
 
             vector<vector<int>> res;
-            map<tuple<int, int, int>, bool> visited;
+            set<tuple<int, int, int>> st;
             for (int i = 0; i < n - 2; i++)
             {
                 for (int j = i + 1; j < n - 1; j++)
@@ -25,10 +25,13 @@ class Solution
                     int sum = nums[i] + nums[j];
                     int k = binarySearch(nums, -sum, j + 1, n - 1);
                     if (k == -1) continue;
-                    if (visited[{nums[i], nums[j], k}]) continue;
-                    visited[{nums[i], nums[j], k}] = true;
-                    res.emplace_back(vector<int>{ nums[i], nums[j], k});
+                    st.emplace(nums[i], nums[j], k);
                 }
+            }
+            
+            for(auto i : st) {
+                auto [ a, b, c ] = i;
+                res.emplace_back(vector<int> {a, b, c});
             }
             return res;
         }
