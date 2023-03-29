@@ -5,7 +5,7 @@ class Solution
         {
             int m = s.size();
             int n = t.size();
-            if (m > n) return false;
+            // if (m > n) return false;
 
             int i = 0;
             for (char c: t)
