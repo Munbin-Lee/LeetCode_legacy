@@ -3,9 +3,10 @@ class Solution
     public:
         void reverseString(vector<char> &s)
         {
+            int n = s.size();
             int lo = 0;
-            int hi = s.size() - 1;
-            
+            int hi = n - 1;
+
             while (lo < hi)
             {
                 swap(s[lo], s[hi]);
