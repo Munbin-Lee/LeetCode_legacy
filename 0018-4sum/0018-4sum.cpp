@@ -15,6 +15,9 @@ public:
                         res.emplace_back(
                             vector<int>{nums[i], nums[j], nums[lo], nums[hi]}
                         );
+                        do{lo++;}while(nums[lo]==nums[lo-1]&&lo<hi);
+                        do{hi--;}while(nums[hi]==nums[hi+1]&&lo<hi);
+                        continue;
                     }
                     (sum < target)? lo++: hi--;
                 }
